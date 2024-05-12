@@ -64,3 +64,21 @@ To test the configuration and force an update on a USG:
 
 - For subdomains (`sub.example.com`), create an A record manually in Cloudflare dashboard first.
 - If you encounter a hostname resolution error (`inadyn[2173778]: Failed resolving hostname https: Name or service not known`), remove `https://` from the `Server` field.
+
+#### Complementary Notes ~ by 51av0sh
+I ran into a few issues and took me about a week to troubleshoot and fix them all. Since documentation is limited I wanted to offer my experience in case someone has similar problems.
+
+1. Starting with installation. I was getting an error when running the Deploy Workers script. I found out that the GHA was not running from the forked repo. To force the run all I did was edit he deploy.yml file (added a space and then removed it). That triggered the workflow and it installed the worker in CF.
+
+2. I have a UDM SE and had to remove the https:// from the server field as it was not working
+
+3. I have a wildcard DNS entry and a root domain entry. To update both at he same time you can add a list of comma separated domains to the Host field like domain.com,*.domain.com. Make sure you have no spaces
+
+4. Some said that dyndns is missing from the UDM but it's there for me in my UDM SE running network application 8.0.28. According to some, if you are missing dyndns you can use dyn. Have not confirmed this.
+
+5. If you want to test this script you have a few options
+   i. Ask your ISP for a new IP.
+   ii. Change the modem mac. You might need to contact your ISP to register the modem again.
+   iii. Use inadyn (easiest but needs SSH). See here
+   
+7. Proxied DNS works fine with his
