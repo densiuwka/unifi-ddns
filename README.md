@@ -76,9 +76,9 @@ I ran into a few issues and took me about a week to troubleshoot and fix them al
 
 4. Some said that dyndns is missing from the UDM but it's there for me in my UDM SE running network application 8.0.28. According to some, if you are missing dyndns you can use dyn. Have not confirmed this.
 
-5. If you want to test this script you have a few options
-   i. Ask your ISP for a new IP.
-   ii. Change the modem mac. You might need to contact your ISP to register the modem again.
-   iii. Use inadyn (easiest but needs SSH). See here
+5. If you want to test this script you have a few options:
+   - Ask your ISP for a new IP.
+   - Change the modem mac. You might need to contact your ISP to register the modem again.
+   - Use inadyn (easiest but needs SSH). [See Here](https://github.com/workerforce/unifi-ddns/issues/42#issuecomment-1790029386)
    
-7. Proxied DNS works fine with his
+6. Proxied DNS works fine with this
