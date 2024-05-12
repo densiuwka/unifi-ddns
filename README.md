@@ -36,7 +36,7 @@ Ensure you have a Cloudflare account and your domain is configured to point to C
 3. Click **Create New Dynamic DNS** and provide:
    - `Service`: Choose `custom` or `dyndns`.
    - `Hostname`: Full subdomain and hostname to update (e.g., `subdomain.mydomain.com` or `mydomain.com` for root domain).
-   - `Username`: Domain name containing the record (e.g., `mydomain.com`).
+   - `Username`: Domain name (ZONE) containing the record (e.g., `mydomain.com`).
    - `Password`: Cloudflare API Token.
    - `Server`: Cloudflare Worker route `<worker-name>.<worker-subdomain>.workers.dev/update?ip=%i&hostname=%h`.
      - For older UniFi devices, omit the URL path.
